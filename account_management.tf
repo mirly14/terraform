@@ -1,42 +1,21 @@
-/* resource "snowflake_account" "account_1" {
-  name                 = var.account_name
-  admin_name           = var.account_admin_name
-  admin_password       = var.account_admin_password
-  email                = var.account_email
-  must_change_password = var.account_must_change_password
-  edition              = var.account_edition
-  comment              = var.account_comment
-  region               = var.account_region
+# -- Account Management -- # 
+
+# ORGADMIN priviliges are required for this resource, only for creating the account for the admin. 
+
+resource "snowflake_account" "beta_account" { 
+  provider = snowflake.orgadmin # It depends on the provider you created
+  name                 = "ACCOUNT_NAME" # *required* ~ Only capital letters, numbers and underscores
+  admin_name           = "ADMIN_NAME" # *required*
+  admin_password       = "ABC1234"
+  email                = "name.lastname@gmail.com" # *required*
+  must_change_password = true # Accepted values true | false ~ Every new account is forced to change password the fisrt time they sign in
+  edition              = "ENTERPRISE" # *required* ~ Accepted values STANDARD | ENTERPRISE | BUSINESS_CRITICAL
+  comment              = "Testing account functionality"
 } 
 
-resource "snowflake_account_grant" "grant" {
-  roles             = var.account_roles
-  privilege         = var.account_privilege
-  with_grant_option = var.account_with_grant_option
-} */
-
-/* resource "snowflake_account_parameter" "p" {
-  key   = var.account_parameter_key
-  value = var.account_parameter_value
-} */
-
-/* resource "snowflake_password_policy" "default" {
-  database = var.account_password_policy_database
-  schema   = var.account_password_policy_schema
-  name     = var.account_password_policy_name
+resource "snowflake_grant_privileges_to_account_role" "example_account" {
+  provider = snowflake.accountadmin
+  privileges        = ["CREATE DATABASE", "CREATE USER"] # It could be any of the Snowflake Global Privileges ~ ["CREATE USER"]
+  account_role_name = "ACCOUNTADMIN" # *required* ~ This is the name of the role you want to grant privileges 
+  on_account        = true # Accepted values true | false ~ If true, the privileges will be granted on the account
 }
-
-resource "snowflake_account_password_policy_attachment" "attachment" {
-  password_policy = snowflake_password_policy.default.qualified_name
-}
-
-
-resource "snowflake_managed_account" "account" {
-  name           = var.managed_account_name
-  admin_name     = var.managed_account_admin_name
-  admin_password = var.managed_account_admin_password
-  type           = var.managed_account_type
-  comment        = var.managed_account_comment
-}
-
- */

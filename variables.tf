@@ -1,6 +1,6 @@
 # Define variables for providers.tf
 
-/* variable "snowflake_account_name" {
+variable "snowflake_account_name" {
   description = "Snowflake Account"
   type        = string
   default     = "opb30669"
@@ -105,8 +105,8 @@ variable "account_parameter_value" {
    type = string
    default = "false" 
 } 
- */
-/* variable "account_password_policy_database" {
+
+variable "account_password_policy_database" {
    description = "database where the password policy is"
    type = string
    default = "test_db" 
@@ -153,7 +153,7 @@ variable "managed_account_type" {
   description = "Type of the managed account."
   type        = string
   default     = "READER"
-} */
+}
 
 
 
@@ -162,7 +162,7 @@ variable "managed_account_type" {
 
 # --- SIMPLE ---
 
-/* variable "snowflake_name_database" {
+variable "snowflake_name_database" {
   description = "Snowflake Database Name"
   type        = string
   default     = "db_simple"
@@ -191,53 +191,53 @@ variable "replication_configuration" {
 variable "ignore_edition_check" {
   type = bool
   default = true */
-/* } */
+}
 
 # --- FROM REPLICA ---
 
-/* variable "snowflake_name_database_from_replication" {
+variable "snowflake_name_database_from_replication" {
   description = "Snowflake Database From Replication Name"
   type = string
   default = "db_with_replication"
-} */
+}
 
-/* variable "from_replica_path" {
+variable "from_replica_path" {
   type = string
   default = "\"org1\".\"account1\".\"primary_db_name\""
 
-} */
+} 
 
-/* variable "snowflake_database_from_share" {
+variable "snowflake_database_from_share" {
   type = string
   default = "db_from_share"
-} */
+}
 
-/* variable "from_share" {
+variable "from_share" {
   type = object({
     provider = string
     share = string
   })
-} */
+}
 
 # Define variables for SCHEMAS
 
-/* variable "snowflake_schema" {
+variable "snowflake_schema" {
   type = string
   default = "my_schema"
-} */
+}
 
-/* variable "schema_data_retention_time_in_days" {
+variable "schema_data_retention_time_in_days" {
   description = "Snowflake Schema Retention Days"
   type = number
   default = 1
-} */
+}
 
 # Define variables for WAREHOUSE
 
-/* variable "warehouse_name" {
+variable "warehouse_name" {
   type = string
   default = "test_wh"
-} */
+}
 
 # Define variables for TABLES
 
@@ -249,7 +249,7 @@ variable "ignore_edition_check" {
 # Define variables for Security and Permissions
 
 #--- FROM USER ---
-/* variable "snowflake_user" {
+variable "snowflake_user" {
    description = "Name of the new user"
    type = string
    default = "test_user"
@@ -284,15 +284,15 @@ variable "role_name" {
    description = "Role to grant permissions"
    type = string
    default = "Public"
-} */ 
+}
 
-/* variable "user_name" {
+variable "user_name" {
    description = "Grant account role to user"
    type = string
    default = "beta_developer"
-} */
+}
 
-/* variable "database" {
+variable "database" {
    description = "Database to grant permissions"
    type = string
    default = "beta_developer"
@@ -318,10 +318,4 @@ variable "role" {
    description = "Name of the rol that needs to be created"
    type = string
    default = "beta_developer"
-}*/
-
-# Define variables for 
-
-# Define variables for 
-
-# Define variables for Other
+}

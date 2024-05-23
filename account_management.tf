@@ -27,3 +27,9 @@ resource "snowflake_grant_privileges_to_account_role" "example_account" {
 #     snowflake_account.beta_account  #name of the resource
 #   ]
 # } 
+
+# This section allows you to print specific code from your resource in the console
+
+# output "copy_statement_pipe" {
+#   value = snowflake_pipe.pipe.copy_statement # Add the resource you want to see
+# }

@@ -241,10 +241,10 @@ variable "warehouse_name" {
 
 # Define variables for TABLES
 
-# variable "table_name" {
-#   type = string
-#   default = "my_table"
-# }
+variable "table_name" {
+  type = string
+  default = "my_table"
+ }
 
 # Define variables for Security and Permissions
 

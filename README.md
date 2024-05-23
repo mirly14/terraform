@@ -39,7 +39,8 @@ Snowflake Integration: Terraform is particularly effective for managing Snowflak
 * [Stages](https://registry.terraform.io/providers/Snowflake-Labs/snowflake/latest/docs/resources/stage) Management: Steps for creating and managing stages.
 * [Shares](https://registry.terraform.io/providers/Snowflake-Labs/snowflake/latest/docs/data-sources/shares) Management: Steps for creating and managing shares.
 * [Snowpipes](https://registry.terraform.io/providers/Snowflake-Labs/snowflake/latest/docs/resources/pipe) Management: Steps for creating and managing pipes.
-
+* [Storage](https://registry.terraform.io/providers/Snowflake-Labs/snowflake/latest/docs/resources/storage_integration) Integration: For creating and manage storage integrations
+* [Notification](https://registry.terraform.io/providers/Snowflake-Labs/snowflake/latest/docs/resources/notification_integration) Integration: For managing information integrations
 **For detailed instructions and examples, refer to the respective sections in the repository.**
 
 

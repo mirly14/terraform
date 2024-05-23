@@ -20,3 +20,15 @@ resource "snowflake_grant_privileges_to_account_role" "schema" {
     snowflake_schema.schema_example
   ]
 }
+
+#--Argument used to specify explicit dependencies between resources
+#  depends_on = [
+#     snowflake_schema.schema_example  #name of the resource
+#   ]
+# } 
+
+# This section allows you to print specific code from your resource in the console
+
+# output "copy_statement_pipe" {
+#   value = snowflake_pipe.pipe.copy_statement # Add the resource you want to see
+# }

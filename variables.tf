@@ -1,3 +1,6 @@
+#-- This is an example in how you can define variables--#
+
+
 # Define variables for providers.tf
 
 variable "snowflake_account_name" {

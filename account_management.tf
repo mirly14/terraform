@@ -2,15 +2,17 @@
 
 # ORGADMIN priviliges are required for this resource, only for creating the account for the admin. 
 
+#This is an example of how you can set up a resource usign variables. 
+
 resource "snowflake_account" "beta_account" { 
   provider = snowflake.orgadmin # It depends on the provider you created
-  name                 = "ACCOUNT_NAME" # *required* ~ Only capital letters, numbers and underscores
-  admin_name           = "ADMIN_NAME" # *required*
-  admin_password       = "ABC1234"
-  email                = "name.lastname@gmail.com" # *required*
+  name                 = var.account_name # *required* ~ Only capital letters, numbers and underscores
+  admin_name           = var.account_admin_name # *required*
+  admin_password       = var.account_admin_password
+  email                = var.account_email # *required*
   must_change_password = true # Accepted values true | false ~ Every new account is forced to change password the fisrt time they sign in
-  edition              = "ENTERPRISE" # *required* ~ Accepted values STANDARD | ENTERPRISE | BUSINESS_CRITICAL
-  comment              = "Testing account functionality"
+  edition              = var.account_edition # *required* ~ Accepted values STANDARD | ENTERPRISE | BUSINESS_CRITICAL
+  comment              = var.account_comment
 } 
 
 resource "snowflake_grant_privileges_to_account_role" "example_account" {

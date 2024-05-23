@@ -16,4 +16,13 @@ resource "snowflake_grant_privileges_to_share" "example" {
   to_share    = snowflake_share.test_share.name # *required*
   privileges  = ["USAGE"] # *required* ~ Accepted values REFERENCE_USAGE | EVOLVE_SCHEMA | SELECT | READ
   on_database = snowflake_database.simple.name # on_database can be changed for on_schema or on_table
+
+
+#--Argument used to specify explicit dependencies between resources
+#  depends_on = [
+#     snowflake_share.test_share  #name of the resource
+#   ]
+# } 
+
+
 }

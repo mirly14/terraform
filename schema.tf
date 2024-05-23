@@ -1,4 +1,6 @@
-# -- Schema -- #
+# -- Schema Management -- #
+
+# If you want to see how to use variables, please refer to the account_management.tf file
 
 resource "snowflake_schema" "schema_example" {
   provider = snowflake.accountadmin # This is the provider that uses the sysadmin role created before (Providers Section above)

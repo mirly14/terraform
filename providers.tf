@@ -3,6 +3,8 @@
 # Here goes the credentials to connect to your Snowflake account
 # It is a best practice to write any name with capitalize letters (e.g. user name, schema name, and so on)
 
+# If you want to see how to use variables, please refer to the account_management.tf file
+
 provider "snowflake" {
   user = "USER_ACCOUNT" # *required*
   password = "Abc12345"  # *required*

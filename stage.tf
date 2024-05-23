@@ -1,4 +1,6 @@
-# -- Stage -- # 
+# -- Stage Management -- # 
+
+# If you want to see how to use variables, please refer to the account_management.tf files
 
 resource "snowflake_stage" "example_stage" {
   provider = snowflake.accountadmin

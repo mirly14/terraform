@@ -2,6 +2,8 @@
 
 # For RBAC 
 
+# If you want to see how to use variables, please refer to the account_management.tf file
+
 # resource snowflake_role TEST_DB_TEST_SCHEMA_R_AR {
 #   name = "TEST_DB_TEST_SCHEMA_R_AR"
 # }

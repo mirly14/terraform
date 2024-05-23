@@ -1,4 +1,6 @@
-# -- Share -- #
+# -- Share Management -- #
+
+# If you want to see how to use variables, please refer to the account_management.tf file
 
 # Remember to define dependency between objects on a share, because shared objects have to be dropped before dropping share
 

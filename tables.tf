@@ -1,4 +1,6 @@
-# TABLES
+# -- Table Management -- #
+
+# If you want to see how to use variables, please refer to the account_management.tf file
 
 /* resource "snowflake_schema" "schema" {
   database = var.snowflake_name_database_with_replication

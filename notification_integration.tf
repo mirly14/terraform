@@ -1,4 +1,6 @@
-# -- Notification Integration -- #
+# -- Notification Integration Management -- #
+
+# If you want to see how to use variables, please refer to the account_management.tf file
 
 # resource "snowflake_notification_integration" "integration" {
 #   name    = "notification" # *required*

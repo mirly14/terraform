@@ -1,4 +1,6 @@
-# -- Data Warehouse -- #
+# -- Warehouse Management -- #
+
+# If you want to see how to use variables, please refer to the account_management.tf file
 
 resource "snowflake_warehouse" "warehouse_test" {
   provider = snowflake.accountadmin

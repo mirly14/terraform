@@ -1,4 +1,6 @@
-# -- Snowflake User -- #
+# -- Snowflake User Management -- #
+
+# If you want to see how to use variables, please refer to the account_management.tf file
 
 # This creates the users that all the different persons are going to use when Signing in Snowflake with their corresponding roles.   
 

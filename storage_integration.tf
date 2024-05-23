@@ -1,4 +1,6 @@
-# -- Storage Integration -- #
+# -- Storage Integration Management -- #
+
+# If you want to see how to use variables, please refer to the account_management.tf file
 
 # resource "snowflake_storage_integration" "integration" {
 #   name    = "storage" # *required*

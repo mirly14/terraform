@@ -1,4 +1,6 @@
-# -- Snowpipe --# 
+# -- Snowpipe Management --# 
+
+# If you want to see how to use variables, please refer to the account_management.tf file
 
 resource "snowflake_pipe" "pipe" {
   provider = snowflake.accountadmin

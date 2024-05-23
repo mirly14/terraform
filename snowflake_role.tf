@@ -1,4 +1,6 @@
-# -- Snowflake Role -- #
+# -- Snowflake Role Management -- #
+
+# If you want to see how to use variables, please refer to the account_management.tf file
 
 # Remenber, when you create a new role it is not automatically assigned to your user account, you have to do that manually or usign the snowflake_grant_account_role resource
 

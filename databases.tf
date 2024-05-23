@@ -18,3 +18,15 @@ resource "snowflake_grant_privileges_to_account_role" "grant_db_to_role" {
     object_name = snowflake_database.simple.name # Refers to the Database created on previous steps
   }
 }
+
+#--Argument used to specify explicit dependencies between resources
+#  depends_on = [
+#     snowflake_database.simple  #name of the resource
+#   ]
+# } 
+
+# This section allows you to print specific code from your resource in the console
+
+# output "copy_statement_pipe" {
+#   value = snowflake_pipe.pipe.copy_statement # Add the resource you want to see
+# }
